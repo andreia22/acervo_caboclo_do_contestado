@@ -2144,7 +2144,7 @@ h6 {
 }
 
 #mobile-nav-toggle i {
-  color: #000;
+  color: #e89a25;
   font-weight: 900;
 }
 
@@ -2183,7 +2183,7 @@ h6 {
 }
 
 #mobile-nav ul li a {
-  color: #860707;
+  color: #e89a25;
   font-size: 13px;
   text-transform: uppercase;
   overflow: hidden;
@@ -2197,7 +2197,7 @@ h6 {
 }
 
 #mobile-nav ul li a:hover {
-  color: #050f47;
+  color: #860707;
 }
 
 #mobile-nav ul li li {
