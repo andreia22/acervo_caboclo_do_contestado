@@ -2346,6 +2346,23 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 
+/* Tablet */
+@media (max-width: 1024px) {
+  .banner-area {
+    background: url(../img/header-bg2.jpeg) no-repeat center center;
+    background-size: cover;
+  }
+}
+
+/* Celular */
+@media (max-width: 768px) {
+  .banner-area {
+    background: url(../img/header-bg2.jpeg) no-repeat center center;
+    background-size: cover;
+  }
+}
+
+
 
 
 .banner-area .overlay-bg {
