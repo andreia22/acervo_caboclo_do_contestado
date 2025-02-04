@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Cultural do Contestado</title>
+    <!-- Inclua o CSS do Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 600px;
+            width: 100%;
+        }
+
+        .info {
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .highlight {
+            fill: orange;
+            /* Cor de destaque ao passar o mouse */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Programação Cultural do Contestado em Santa Catarina</h1>
+    <div id="map"></div>
+    <div id="info" class="info"></div>
+
+    <!-- Inclua o JavaScript do Leaflet -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Coordenadas de Santa Catarina e cidades do Contestado
+        var santaCatarina = [-27.2423, -50.2189];
+        var cidades = [
+            {
+                nome: "Caçador",
+                coordenadas: [-26.7754, -51.0120],
+                programacao: [
+                    { artista: "Banda XYZ", arte: "Show de Rock", horario: "20:00", local: "Praça Central" },
+                    { artista: "Grupo ABC", arte: "Teatro", horario: "18:00", local: "Teatro Municipal" }
+                ]
+            },
+            {
+                nome: "Curitibanos",
+                coordenadas: [-27.2826, -50.5814],
+                programacao: [
+                    { artista: "Cantor Z", arte: "MPB", horario: "19:30", local: "Parque das Araucárias" }
+                ]
+            },
+            {
+                nome: "Canoinhas",
+                coordenadas: [-26.1766, -50.3950],
+                programacao: [
+                    { artista: "Orquestra Sinfônica", arte: "Concerto Clássico", horario: "21:00", local: "Centro Cultural" }
+                ]
+            },
+            {
+                nome: "Lages",
+                coordenadas: [-27.8150, -50.3259],
+                programacao: [
+                    { artista: "Grupo de Dança", arte: "Dança Contemporânea", horario: "17:00", local: "Teatro Marajoara" }
+                ]
+            }
+        ];
+
+        // Cria o mapa centrado em Santa Catarina
+        var map = L.map('map').setView(santaCatarina, 8);
+
+        // Adiciona o mapa base do OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Função para exibir a programação
+        function exibirProgramacao(cidade) {
+            var infoDiv = document.getElementById('info');
+            var programacaoHTML = `<h3>${cidade.nome}</h3><ul>`;
+            cidade.programacao.forEach(function (evento) {
+                programacaoHTML += `
+                    <li>
+                        <strong>Artista:</strong> ${evento.artista}<br>
+                        <strong>Arte:</strong> ${evento.arte}<br>
+                        <strong>Horário:</strong> ${evento.horario}<br>
+                        <strong>Local:</strong> ${evento.local}
+                    </li>`;
+            });
+            programacaoHTML += "</ul>";
+            infoDiv.innerHTML = programacaoHTML;
+        }
+
+        // Adiciona marcadores e interação para cada cidade
+        cidades.forEach(function (cidade) {
+            var marker = L.circleMarker(cidade.coordenadas, {
+                radius: 8,
+                fillColor: "blue",
+                color: "#000",
+                weight: 1,
+                opacity: 1,
+                fillOpacity: 0.8
+            }).addTo(map);
+
+            // Evento ao passar o mouse sobre o marcador
+            marker.on('mouseover', function () {
+                this.setStyle({ fillColor: 'orange' }); // Muda a cor do marcador
+                exibirProgramacao(cidade); // Exibe a programação
+            });
+
+            // Evento ao retirar o mouse do marcador
+            marker.on('mouseout', function () {
+                this.setStyle({ fillColor: 'blue' }); // Volta à cor original
+                document.getElementById('info').innerHTML = ""; // Limpa a informação
+            });
+        });
+    </script>
+</body>
+
+</html>
