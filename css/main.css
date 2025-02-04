@@ -2273,14 +2273,14 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .primary-btn {
-  background-color: #02330d;
+  background-color: #06731e;
   line-height: 42px;
   padding-left: 40px;
   padding-right: 40px;
   border-radius: 3%;
   color: #080808;
   display: inline-block;
-  font-weight: 500;
+  font-weight: 600;
   position: relative;
   border: 1px solid transparent;
   -webkit-transition: all 0.3s ease 0s;
@@ -2309,9 +2309,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .primary-btn:hover {
-  color: #080808;
-  background-color: transparent;
-  border-color: #080808;
+  color: #000;
+  background-color: #e89a25;
+  border-color: #e89a25;
 }
 
 .primary-btn.white {
@@ -2344,6 +2344,54 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: url(../img/header-bg2.jpeg) center;
   background-size: cover;
 }
+
+/* u que fiz*/
+
+
+
+.banner-area {
+  background: url(../img/header-bg2.jpeg) center center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  /* Faz com que ocupe a altura total da tela */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ajuste para tablets (largura máxima de 1024px) */
+@media (max-width: 1024px) {
+  .banner-area {
+    background-position: top center;
+    /* Ajusta o foco da imagem */
+    height: 80vh;
+    /* Reduz um pouco a altura */
+  }
+}
+
+/* Ajuste para celulares (largura máxima de 768px) */
+@media (max-width: 768px) {
+  .banner-area {
+    background-size: contain;
+    /* Mantém a proporção da imagem */
+    background-position: center;
+    height: 60vh;
+    /* Reduz a altura para não ocupar toda a tela */
+  }
+}
+
+/* Ajuste para telas muito pequenas (menos de 480px) */
+@media (max-width: 480px) {
+  .banner-area {
+    background-size: contain;
+    /* Evita cortes na imagem */
+    height: auto;
+    padding: 20px;
+    /* Adiciona um espaçamento interno */
+  }
+}
+
+
 
 .banner-area .overlay-bg {
   background-color: rgba(0, 0, 0, 0.4);
