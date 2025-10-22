@@ -2606,7 +2606,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .upcoming-event-area .event-left .single-events {
   margin-bottom: 50px;
-  background-color: #ffffff;
+  background-color: #222;
 }
 
 .upcoming-event-area .event-left .single-events h4 {
@@ -2696,7 +2696,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .gallery-area {
-  background-color: #04091e;
+  background-color: #02220d;
 }
 
 .gallery-area #grid-container {
