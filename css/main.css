@@ -6,6 +6,9 @@
 /* =================================== */
 /*  Basic Style 
 /* =================================== */
+
+
+
 ::-moz-selection {
   /* Code for Firefox */
   background-color: #097721;
@@ -2342,7 +2345,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 
 .banner-area {
-  background: url(../img/header-bg2.jpeg) no-repeat center center;
+  background: url(../img/header-bg2.jpeg);
   background-size: cover;
 }
 
