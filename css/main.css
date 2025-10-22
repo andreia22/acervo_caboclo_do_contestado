@@ -2340,12 +2340,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   bottom: 0;
 }
 
-@media (max-width: 1024px) {
-  .banner-area {
-    background: url(../img/header-bg2.jpeg) center;
-    background-size: cover;
-  }
+
+.banner-area {
+  background: url(../img/header-bg2.jpeg) no-repeat center center;
+  background-size: cover;
 }
+
 
 /* Tablet */
 @media (max-width: 1024px) {
