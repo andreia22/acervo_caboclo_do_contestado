@@ -2340,7 +2340,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   bottom: 0;
 }
 
-@media (max-width: 2048px) {
+@media (max-width: 1024px) {
   .banner-area {
     background: url(../img/header-bg2.jpeg) center;
     background-size: cover;
