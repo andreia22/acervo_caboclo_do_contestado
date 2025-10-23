@@ -6,8 +6,8 @@ var cidades = [
         coordenadas: [-26.7754, -51.0120],
         cor: "#FF5733", // Cor personalizada
         programacao: [
-            { artista: "Banda XYZ", arte: "Show de Rock", horario: "20:00", local: "Praça Central" },
-            { artista: "Grupo ABC", arte: "Teatro", horario: "18:00", local: "Teatro Municipal" }
+            { artista: "Batalha do CEU", arte: "Hip Hop", horario: "20:00", local: "Praça Do CEU" },
+            { artista: "Descalço na Geada", arte: "Teatro", horario: "18:00", local: "Salão Vermelho" }
         ]
     },
     {
@@ -15,7 +15,7 @@ var cidades = [
         coordenadas: [-27.2826, -50.5814],
         cor: "#33FF57", // Cor personalizada
         programacao: [
-            { artista: "Cantor Z", arte: "MPB", horario: "19:30", local: "Parque das Araucárias" }
+            { artista: "Batalha de Rima ", arte: "Hip Hop", horario: "18:30", local: "Centro da Cidade" }
         ]
     },
     {
@@ -23,7 +23,7 @@ var cidades = [
         coordenadas: [-26.1766, -50.3950],
         cor: "#3357FF", // Cor personalizada
         programacao: [
-            { artista: "Orquestra Sinfônica", arte: "Concerto Clássico", horario: "21:00", local: "Centro Cultural" }
+            { artista: "Batalha de Rima", arte: "Hip Hop", horario: "21:00", local: "Centro Cultural" }
         ]
     },
     {
@@ -31,7 +31,7 @@ var cidades = [
         coordenadas: [-27.8150, -50.3259],
         cor: "#FF33A1", // Cor personalizada
         programacao: [
-            { artista: "Grupo de Dança", arte: "Dança Contemporânea", horario: "17:00", local: "Teatro Marajoara" }
+            { artista: "Teatro de Rua", arte: "Teatro", horario: "16:00", local: "Praça Central" }
         ]
     }
 ];
