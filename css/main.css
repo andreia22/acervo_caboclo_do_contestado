@@ -2358,6 +2358,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 }
 
+
+
 /* Celular */
 @media (max-width: 768px) {
   .banner-area {
@@ -2366,7 +2368,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 }
 
+/* meu codigo */
 
+/* meu codigo */
 
 
 .banner-area .overlay-bg {
@@ -2491,7 +2495,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 
   .single-service .overlay {
-    height: 88%;
+    height: 58%;
   }
 }
 
@@ -2567,9 +2571,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .single-exibition .tags li {
   display: inline-block;
-  background-color: #fff;
+  background-color: #02220d;
   padding: 5px 15px;
-  border: 1px solid #eee;
+  border: 1px solid #060606;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -2577,7 +2581,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .single-exibition .tags li a {
-  color: #222;
+  color: #060606;
   font-weight: 600;
 }
 
